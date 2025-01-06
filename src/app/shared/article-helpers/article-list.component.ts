@@ -62,6 +62,7 @@ export class ArticleListComponent implements OnDestroy {
       .subscribe((data) => {
         this.loading = LoadingState.LOADED;
         this.results = data.articles;
+        window.localStorage.setItem("articles",JSON.stringify(data.articles));
 
         // Used from http://www.jstips.co/en/create-range-0...n-easily-using-one-line/
         this.totalPages = Array.from(
