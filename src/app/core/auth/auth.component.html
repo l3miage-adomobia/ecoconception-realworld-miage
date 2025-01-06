@@ -4,10 +4,10 @@
       <div class="col-md-6 offset-md-3 col-xs-12">
         <h1 class="text-xs-center">{{ title }}</h1>
         <p class="text-xs-center">
-          <a *ngIf="authType === 'register'" [routerLink]="['/login']"
+          <a [routerLink]="['/login']"
             >Have an account?</a
           >
-          <a *ngIf="authType === 'login'" [routerLink]="['/register']"
+          <a  [routerLink]="['/register']"
             >Need an account?</a
           >
         </p>
@@ -16,7 +16,7 @@
           <fieldset [disabled]="isSubmitting">
             <fieldset class="form-group">
               <input
-                *ngIf="authType === 'register'"
+
                 formControlName="username"
                 placeholder="Username"
                 class="form-control form-control-lg"
