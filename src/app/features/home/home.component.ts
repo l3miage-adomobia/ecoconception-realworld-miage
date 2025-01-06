@@ -73,4 +73,6 @@ export class HomeComponent implements OnInit, OnDestroy {
     // Otherwise, set the list object
     this.listConfig = { type: type, filters: filters };
   }
+
+  protected readonly Infinity = Infinity;
 }
